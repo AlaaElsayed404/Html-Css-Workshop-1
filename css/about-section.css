@@ -1,0 +1,51 @@
+   /* ABOUT SECTION */
+
+   .about{
+    height: 100vh;
+}
+
+.about-content{
+    overflow: hidden;  /* الاب بتاع الاباء اللي هياخدوا float */
+}
+
+.about-item{
+    width: 30%;
+    float: left;
+    text-align: center;
+    border: 1px solid #e8e8e8;
+    padding: 50px 20px;
+    margin-bottom: 5%;
+  
+}
+
+
+.about-item:hover .about-item-title,  .about-item:hover .about-item-desc{
+    color: var(--whitecolor);
+}
+.about-item.mg{
+    margin: 0 5% ;
+}
+
+.about-item .icon{
+    color: var(--maincolor);
+    margin-bottom: 10px;
+}
+
+.about-item-title{
+    text-transform: capitalize;
+    margin-bottom: 10px;
+    transition: color .3s;
+}
+
+.about-item-desc{
+    line-height: 1.6;
+    margin-bottom: 10px;
+    transition: color .3s;
+}
+
+.about-item-link{
+    color: var(--maincolor);
+    text-transform: capitalize;
+    text-decoration: none;
+
+}

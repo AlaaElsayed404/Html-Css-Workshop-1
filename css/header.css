@@ -1,0 +1,171 @@
+/*3.1 header */
+
+.header{
+    background: rgba(0,0,0,0.3);
+    position: fixed; /* البوسيشن فيكسد وابليوت بيحلوا العنصر من ديسبلاي بلوك لديسبلاي انلاين بلوك*/
+    width: 100%;/* عشان كده هديه عرض 100 عشان يملا المساحة */
+    z-index: 1;
+}
+
+.header .nav {
+    width: 60%;
+    float: left;
+    list-style: none;
+    text-align: right;
+}
+
+.header .logo{
+    width: 40%;
+    float: left;
+    display: inline;
+}
+
+
+.header .logo img{
+    width: 100px;
+    display: block;
+    margin-top: 17px;
+}
+/* .header-conent{
+    overflow: hidden; 
+}  */
+/* to solve float problem */
+/* يعني اي حاجه بره البلوك ماتبانش */
+/* مش هستعملها عشان مش هتخلي الدروب داون يظهر */
+
+.header .nav > li{
+    display: inline-block;
+}
+
+.header .nav > li > a {
+    color: var(--whitecolor);
+    text-decoration: none; 
+    padding: 30px 10px; /*   يمين وشمال - فوق وتحت */
+    display: block; /* عشان البادينج ييجي من كل الجوانب */
+    font-size: 15px;
+}    
+
+.dropdown{
+    position: relative;
+   
+}
+
+.dropdown-menu{
+    position: absolute; 
+    background: var(--maincolor);
+    
+   
+    text-decoration: none;
+    width: 110px;
+    text-align: center;
+    
+    left: -40%;
+    top: 85%;
+    visibility: hidden;
+    opacity: 0; /* عشان اديه ترانزيشن */
+
+    padding: 10px;
+    color:var(--whitecolor);
+    display: block;
+    transition: opacity 0.3s; /* للاب عشان هو اللي بيتأثر */
+   
+}
+
+
+    
+.dropdown:hover  .dropdown-menu{
+    visibility:visible;
+    opacity: 1; /* عشان اديه ترانزيشن */
+    }
+
+.home{
+    height: 100vh;
+    background-image: url(../images/background/background1.webp);
+    /* background-position: center; */
+    background-size: cover;
+    position: relative;
+    background-attachment: fixed;
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.7);/* a= opacity -alpha */
+}
+
+.home-content {
+  
+    /* hero image عشان اخلي الكلام في النص فوق صورة */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    width:65% ;
+
+}
+
+.title{
+    color: var(--whitecolor);
+    font-size: 3.5rem;
+    text-transform: uppercase;
+}
+
+
+.home-desc{
+    margin: 20px 0;
+    color: var(--whitecolor);
+    letter-spacing: 2px;
+    line-height: 1.5;
+    text-transform: capitalize;
+
+}
+
+.btn{
+    min-width: 160px;
+    padding: 15px 0;
+    border-radius: 5px ;
+    border: 0;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.home .btn-start {
+
+    margin-right: 10px;
+    background: white;
+    text-transform: capitalize;
+}
+
+.home .btn-learn , .get-in-touch-btn.btn{
+
+    color: var(--whitecolor);
+    background:var(--maincolor) ;
+    text-transform: capitalize;
+}
+
+.header .nav > li > a::after , .header .nav > li > a.active::after{
+    content: "";
+    display: block; /* الافتر والبيفور عناصر ان لاين فهخليها بلوك */
+    /* width: ; */
+    height: 3px;
+    background-color: var(--maincolor);
+    transition: width 0.3s;
+    margin-top: 2px;
+}
+
+.header .nav > li > a::after{
+    width: 0;
+}
+
+.header .nav > li > a.active::after{
+    width: 100%;
+}
+
+.header .nav > li > a:hover:after{ /* لما اعمل هوفر على الايه هاتلي كل الافتر */
+    width: 100%;
+   
+}
